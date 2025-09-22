@@ -1,9 +1,8 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 #define intll long long
 #define endl '\n'
-#define TEST_CASE true
 
 template<typename T>
 void PRINT(vector<T>& arr) {
@@ -23,6 +22,9 @@ void solution() {
 }
 
 int32_t main() {
+
+	// Test Case
+	bool TEST_CASE = !true;
 
 	ios::sync_with_stdio(false) ; cin.tie(0) ;
 

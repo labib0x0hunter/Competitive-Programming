@@ -143,3 +143,4 @@ struct segment_tree_lazy {
 	// query
 	TT query(int l, int r) { T ans = query(1, 1, N, l, r); return ans.val; }
 };
+
