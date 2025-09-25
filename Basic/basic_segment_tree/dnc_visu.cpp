@@ -10,11 +10,14 @@ void PRINT(vector<T>& arr) {
 		cout << arr[i] << " \n"[i == int(arr.size()) - 1];
 }
 
-void dnc(int l, int r) {
-    
-    cout << l << " " << r << endl;
+int call_no = 0;
 
-	if (l == r) return;
+int dnc(int l, int r) {
+	++call_no;
+	int temp = call_no;
+	cout << "Call: " << call_no << " " << "dividing (range): " << l << " " << r << endl;
+
+	if (l == r) return call_no;
 	int mid = l + (r - l) / 2;
 
 	// divide
@@ -23,6 +26,9 @@ void dnc(int l, int r) {
 	int right = dnc(mid + 1, r);
 
 	// conquer
+
+	cout << "Call: " << temp << " " << "merging (range): " << l << " " << r << " Call: " << left << " " << right << endl;
+	return temp;
 }
 
 void solution() {

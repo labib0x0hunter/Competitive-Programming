@@ -5,29 +5,56 @@ using namespace std;
 #define endl '\n'
 
 template<typename T>
-void PRINT(vector<T>& arr) {
+void PRINT(vector<T> arr) {
 	for (int i = 0; i < int(arr.size()); i++)
 		cout << arr[i] << " \n"[i == int(arr.size()) - 1];
 }
 
-void dnc(int l, int r) {
-    
-    cout << l << " " << r << endl;
+vector<int> arr;
 
-	if (l == r) return;
+vector<int> dnc(int l, int r) {
+	if (l == r) {
+		return vector<int> {arr[l]};
+	}
+	
 	int mid = l + (r - l) / 2;
 
 	// divide
+	vector<int> a = dnc(l, mid);
+	vector<int> b = dnc(mid + 1, r);
 
-	int left = dnc(l, mid);
-	int right = dnc(mid + 1, r);
+	// merge
+	int n = a.size(), m = b.size();
+	vector<int> ans(n + m);
 
-	// conquer
+	int i = 0, j = 0, I = 0;
+	while (i < n && j < m) {
+		if (a[i] <= b[j]) {
+			ans[I++] = a[i++];
+		} else {
+			ans[I++] = b[j++];
+		}
+	}
+
+	while (i < n) {
+		ans[I++] = a[i++];
+	}
+
+	while (j < m) {
+		ans[I++] = b[j++];
+	}
+
+	return ans;
 }
 
 void solution() {
 
-	dnc(1, 10);
+	arr.resize(4);
+	arr = {3, 2, 3, 1};
+
+	auto ans = dnc(0, arr.size() - 1);
+
+	PRINT(ans);
 
 }
 
