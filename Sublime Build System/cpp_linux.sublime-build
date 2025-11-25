@@ -1,0 +1,7 @@
+{
+"cmd" : [" (g++ -w -std=c++20 ${file}) && (./a.out) < /home/labib/Desktop/Code/input.txt | tee /home/labib/Desktop/Code/output.txt"], 
+"selector" : "source.c++",
+"shell": true,
+"working_dir" : "$file_path",
+"file_regex" : "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$"
+}
