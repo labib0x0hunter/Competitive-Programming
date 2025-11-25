@@ -1,5 +1,5 @@
 # Competitive-Programming ( CP )
-My personal **Notes, Resources, Solutions and Templates** for competitive programming..
+My Personal **Notes, Resources, Solutions and Templates** for Competitive Programming..
 ---
 - Basic_CP : Solution using basic programming. Very Basic And Beginner.
 - Dmoj-Solution : Solution from [DMOJ](https://dmoj.ca/) platform.
