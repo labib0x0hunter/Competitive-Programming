@@ -1,4 +1,4 @@
-# Competitive-Programming ( CP )
+# Competitive-Programming ( CP )    -   Treat This Section As A Game And Fun Programming.
 My Personal **Notes, Resources, Solutions and Templates** for Competitive Programming..
 ---
 - Basic_CP : Solution using basic programming. Very Basic And Beginner.
